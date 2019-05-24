@@ -1,0 +1,8 @@
+encrypt:
+  key-store:
+    location: server.keystore		#生成在jks文件路径
+    alias: config-server			#别名
+    password: hellxz			#key store 秘钥
+    secret: hellxz			#私钥
+
+#keytool -genkeypair -alias config-server -keyalg RSA -keystore server.keystore
