@@ -13,3 +13,14 @@ spring:
 
 server:
   port: 8881
+
+
+management:  #actuator
+  server:
+    port: ${server.port}
+  endpoints:
+    web:
+      #      base-path: / #默认是/actuator 前缀，可以在这里修改
+      exposure:
+        include: "*"  #打开全部请求端点
+#        include: refresh,health,info #打开部分
