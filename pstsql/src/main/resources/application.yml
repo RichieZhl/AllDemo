@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://172.19.3.11:9999/test
+    username: test
+    password: 123456
+    driverClassName: org.postgresql.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialization-mode: always
+  jpa:
+    show-sql: true
+    database-platform: com.richie.pstsql.dialect.JsonbPostgresDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+
+logging:
+  level:
+    root: info
+server:
+  port: 8080
+  max-http-header-size: 8192
+
+portgsql:
+  datasource:
+    url: jdbc:postgresql://IP:端口/库名
+    username: 用户名
+    password: 密码
+    driver-class-name: org.postgresql.Driver
+    maxActive: 50
+    initialSize: 10
+    maxWait: 60000
+    minIdle: 6
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
