@@ -14,10 +14,24 @@ spring:
         git:
           uri: https://github.com/RichieZhl/AllDemo
           searchPaths: spring-cloud/configs
+    bus:
+      refresh:
+        enabled: true
   application:
     name: config-server
-  rabbitmq:
-    host: 172.19.3.77
-    port: 5672
-    username: root
-    password: 123456
+  kafka:
+    bootstrap-servers: 172.19.3.18:9092,172.19.3.21:9092
+    consumer:
+      group-id: springcloud-bus
+
+#  rabbitmq:
+#    host: 172.19.3.77
+#    port: 5672
+#    username: root
+#    password: 123456
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'   #refresh
