@@ -17,8 +17,13 @@
         <module>mybatis</module>
         <module>pstsql</module>
         <module>eureka-server</module>
-        <module>eureka-client</module>
+        <module>service-helloworld</module>
         <module>config-server</module>
         <module>config-client</module>
+        <module>service-helloworld</module>
+        <module>service-ribbon</module>
+        <module>spring-cloud-starter-feign</module>
+        <module>spring-hystrix-moniter</module>
+        <module>spring-cloud-zuul</module>
     </modules>
 </project>

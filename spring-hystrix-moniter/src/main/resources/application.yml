@@ -1,0 +1,17 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
+
+server:
+  port: 8903
+
+spring:
+  application:
+    name: hystrix-moniter
+
+turbine:
+  app-config: service-ribbon, service-feign
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")

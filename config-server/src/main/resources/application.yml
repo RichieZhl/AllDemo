@@ -16,3 +16,8 @@ spring:
           searchPaths: spring-cloud/configs
   application:
     name: config-server
+  rabbitmq:
+    host: 172.19.3.77
+    port: 5672
+    username: root
+    password: 123456

@@ -9,7 +9,15 @@ spring:
   cloud:
     config:
       profile: dev
-      uri: http://localhost:8888/
+#      uri: http://localhost:8888/ 指定uri
+      discovery: # 自动发现config-server，无需指定
+        enabled: true
+        service-id: config-server
+  rabbitmq:
+    host: 172.19.3.77
+    port: 5672
+    username: root
+    password: 123456
 
 server:
   port: 8881

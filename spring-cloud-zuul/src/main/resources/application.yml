@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
+
+server:
+  port: 8904
+
+spring:
+  application:
+    name: cloud-zuul
+zuul:
+  routes:
+    ribbo:
+      path: /api-ribbon/**
+      serviceId: service-ribbon
+    feign:
+      path: /api-feign/**
+      serviceId: service-feign
